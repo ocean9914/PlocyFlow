@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="policy_streamModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="policy_streamModelStoreContainer">
+          <EntitySet Name="approve_type" EntityType="policy_streamModel.Store.approve_type" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="aprove_user" EntityType="policy_streamModel.Store.aprove_user" store:Type="Tables" store:Schema="policy_stream" store:Name="aprove_user">
+            <DefiningQuery>SELECT
+      `aprove_user`.`pid`, 
+      `aprove_user`.`aid`, 
+      `aprove_user`.`uid`, 
+      `aprove_user`.`memo1`, 
+      `aprove_user`.`memo2`, 
+      `aprove_user`.`memo3`, 
+      `aprove_user`.`memo`
+      FROM `aprove_user` AS `aprove_user`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="bip_data" EntityType="policy_streamModel.Store.bip_data" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="complain" EntityType="policy_streamModel.Store.complain" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="complainflow" EntityType="policy_streamModel.Store.complainflow" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="complainorder" EntityType="policy_streamModel.Store.complainorder" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="declareflow" EntityType="policy_streamModel.Store.declareflow" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="declareorder" EntityType="policy_streamModel.Store.declareorder" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="dept" EntityType="policy_streamModel.Store.dept" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="game_status" EntityType="policy_streamModel.Store.game_status" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="game_type" EntityType="policy_streamModel.Store.game_type" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="policy" EntityType="policy_streamModel.Store.policy" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="product_type" EntityType="policy_streamModel.Store.product_type" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="role" EntityType="policy_streamModel.Store.role" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="t_page" EntityType="policy_streamModel.Store.t_page" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="t_user" EntityType="policy_streamModel.Store.t_user" store:Type="Tables" Schema="policy_stream" />
+          <EntitySet Name="v_approve_userlist" EntityType="policy_streamModel.Store.v_approve_userlist" store:Type="Views" store:Schema="policy_stream" store:Name="v_approve_userlist">
+            <DefiningQuery>SELECT
+      `v_approve_userlist`.`uid`, 
+      `v_approve_userlist`.`user_name`, 
+      `v_approve_userlist`.`pid`, 
+      `v_approve_userlist`.`p_id`, 
+      `v_approve_userlist`.`p_name`, 
+      `v_approve_userlist`.`aid`, 
+      `v_approve_userlist`.`name`
+      FROM `v_approve_userlist` AS `v_approve_userlist`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_bipdata" EntityType="policy_streamModel.Store.v_bipdata" store:Type="Views" store:Schema="policy_stream" store:Name="v_bipdata">
+            <DefiningQuery>SELECT
+      `v_bipdata`.`Productid`, 
+      `v_bipdata`.`ProductName`, 
+      `v_bipdata`.`Departmentid`, 
+      `v_bipdata`.`DeptName`, 
+      `v_bipdata`.`ProductTypeid`, 
+      `v_bipdata`.`ProductTypeName`, 
+      `v_bipdata`.`OBDate`, 
+      `v_bipdata`.`GameTypeid`, 
+      `v_bipdata`.`Game_Name`, 
+      `v_bipdata`.`Statusid`, 
+      `v_bipdata`.`StatusName`, 
+      `v_bipdata`.`Manager`, 
+      `v_bipdata`.`Policyid`, 
+      `v_bipdata`.`PolicyName`, 
+      `v_bipdata`.`IsDone`, 
+      `v_bipdata`.`Remark`
+      FROM `v_bipdata` AS `v_bipdata`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_complain_order" EntityType="policy_streamModel.Store.v_complain_order" store:Type="Views" store:Schema="policy_stream" store:Name="v_complain_order">
+            <DefiningQuery>SELECT
+      `v_complain_order`.`order_Id`, 
+      `v_complain_order`.`productId`, 
+      `v_complain_order`.`ProductName`, 
+      `v_complain_order`.`Departmentid`, 
+      `v_complain_order`.`Departmentname`, 
+      `v_complain_order`.`complainId`, 
+      `v_complain_order`.`complainName`, 
+      `v_complain_order`.`oper_date`, 
+      `v_complain_order`.`oper_user`, 
+      `v_complain_order`.`endate`, 
+      `v_complain_order`.`last_oper`, 
+      `v_complain_order`.`last_memo`
+      FROM `v_complain_order` AS `v_complain_order`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_declare_order" EntityType="policy_streamModel.Store.v_declare_order" store:Type="Views" store:Schema="policy_stream" store:Name="v_declare_order">
+            <DefiningQuery>SELECT
+      `v_declare_order`.`order_Id`, 
+      `v_declare_order`.`policyId`, 
+      `v_declare_order`.`policyName`, 
+      `v_declare_order`.`product_Id`, 
+      `v_declare_order`.`ProductName`, 
+      `v_declare_order`.`IsDone`, 
+      `v_declare_order`.`dept_id`, 
+      `v_declare_order`.`dept_name`, 
+      `v_declare_order`.`oper_user`, 
+      `v_declare_order`.`oper_date`, 
+      `v_declare_order`.`last_oper`, 
+      `v_declare_order`.`last_memo`
+      FROM `v_declare_order` AS `v_declare_order`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_user_role" EntityType="policy_streamModel.Store.v_user_role" store:Type="Views" store:Schema="policy_stream" store:Name="v_user_role">
+            <DefiningQuery>SELECT
+      `v_user_role`.`id`, 
+      `v_user_role`.`user_id`, 
+      `v_user_role`.`user_name`, 
+      `v_user_role`.`role_id`, 
+      `v_user_role`.`name`, 
+      `v_user_role`.`vcode`
+      FROM `v_user_role` AS `v_user_role`</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="approve_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="16" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.aprove_user”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="aprove_user">
+          <Key>
+            <PropertyRef Name="pid" />
+            <PropertyRef Name="aid" />
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="aid" Type="int" Nullable="false" />
+          <Property Name="uid" Type="int" Nullable="false" />
+          <Property Name="memo1" Type="varchar" MaxLength="64" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="bip_data">
+          <Key>
+            <PropertyRef Name="Productid" />
+            <PropertyRef Name="Policyid" />
+          </Key>
+          <Property Name="Productid" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Departmentid" Type="int" />
+          <Property Name="ProductTypeid" Type="varchar" MaxLength="32" />
+          <Property Name="OBDate" Type="datetime" />
+          <Property Name="GameTypeid" Type="varchar" MaxLength="32" />
+          <Property Name="Statusid" Type="int" />
+          <Property Name="Manager" Type="varchar" MaxLength="128" />
+          <Property Name="Policyid" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="IsDone" Type="bit" />
+          <Property Name="Remark" Type="varchar" MaxLength="128" />
+          <Property Name="memo1" Type="varchar" MaxLength="64" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="64" />
+          <Property Name="memo4" Type="varchar" MaxLength="64" />
+          <Property Name="memo5" Type="varchar" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="complain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="complainflow">
+          <Key>
+            <PropertyRef Name="sn" />
+          </Key>
+          <Property Name="sn" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="orderId" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="complainId" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+          <Property Name="pm" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="attach_url" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="oper_memo" Type="text" Nullable="false" />
+          <Property Name="oper_type" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="oper_date" Type="datetime" Nullable="false" />
+          <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo1" Type="varchar" MaxLength="64" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="64" />
+          <Property Name="memo4" Type="varchar" MaxLength="64" />
+          <Property Name="memo5" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="complainorder">
+          <Key>
+            <PropertyRef Name="order_Id" />
+          </Key>
+          <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="productId" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="productName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="complainId" Type="int" Nullable="false" />
+          <Property Name="complainName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_date" Type="datetime" Nullable="false" />
+          <Property Name="next_oper" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="attach_url" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="memo" Type="text" Nullable="false" />
+          <Property Name="endate" Type="datetime" Nullable="false" />
+          <Property Name="last_oper" Type="varchar" MaxLength="64" />
+          <Property Name="last_oper_date" Type="datetime" />
+          <Property Name="last_memo" Type="text" />
+          <Property Name="staute" Type="bit" />
+          <Property Name="memo1" Type="varchar" MaxLength="64" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="64" />
+          <Property Name="memo4" Type="varchar" MaxLength="64" />
+          <Property Name="memo5" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="declareflow">
+          <Key>
+            <PropertyRef Name="sn" />
+          </Key>
+          <Property Name="sn" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_type" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="oper_memo" Type="text" />
+          <Property Name="oper_date" Type="datetime" Nullable="false" />
+          <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+          <Property Name="memo1" Type="varchar" MaxLength="64" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="64" />
+          <Property Name="memo4" Type="varchar" MaxLength="64" />
+          <Property Name="memo5" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="declareorder">
+          <Key>
+            <PropertyRef Name="order_Id" />
+          </Key>
+          <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="policyId" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="product_Id" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_date" Type="datetime" Nullable="false" />
+          <Property Name="staute" Type="bit" Nullable="false" />
+          <Property Name="attach_url" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="memo" Type="text" />
+          <Property Name="next_oper" Type="varchar" Nullable="false" MaxLength="512" />
+          <Property Name="last_oper" Type="varchar" MaxLength="64" />
+          <Property Name="last_oper_date" Type="datetime" />
+          <Property Name="memo1" Type="text" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="64" />
+          <Property Name="memo4" Type="varchar" MaxLength="64" />
+          <Property Name="memo5" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="dept">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="d_id" Type="int" Nullable="false" />
+          <Property Name="d_name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="game_status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="s_id" Type="int" Nullable="false" />
+          <Property Name="s_name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="game_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="g_id" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="g_name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="policy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="p_id" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="p_name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="product_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="p_id" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="p_name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="memo" Type="varchar" MaxLength="64" />
+          <Property Name="vcode" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="t_page">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="page_name" Type="varchar" MaxLength="50" />
+          <Property Name="page_url" Type="varchar" MaxLength="50" />
+          <Property Name="isleaf" Type="varchar" MaxLength="1" />
+          <Property Name="parentid" Type="int" />
+          <Property Name="vcode" Type="varchar" MaxLength="64" />
+          <Property Name="is_shortcut" Type="varchar" MaxLength="1" />
+          <Property Name="is_show" Type="varchar" MaxLength="1" />
+          <Property Name="memo1" Type="varchar" MaxLength="32" />
+          <Property Name="memo2" Type="varchar" MaxLength="32" />
+          <Property Name="memo3" Type="varchar" MaxLength="32" />
+          <Property Name="memo" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="t_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="user_name" Type="varchar" MaxLength="64" />
+          <Property Name="role_id" Type="int" />
+          <Property Name="vcode" Type="varchar" MaxLength="64" />
+          <Property Name="memo3" Type="varchar" MaxLength="32" />
+          <Property Name="memo" Type="varchar" MaxLength="32" />
+          <Property Name="memo1" Type="varchar" MaxLength="64" />
+          <Property Name="memo2" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_approve_userlist”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="v_approve_userlist">
+          <Key>
+            <PropertyRef Name="uid" />
+            <PropertyRef Name="pid" />
+            <PropertyRef Name="p_id" />
+            <PropertyRef Name="p_name" />
+            <PropertyRef Name="aid" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="uid" Type="int" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="64" />
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="p_id" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="p_name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="aid" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="16" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_bipdata”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="v_bipdata">
+          <Key>
+            <PropertyRef Name="Productid" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="DeptName" />
+            <PropertyRef Name="ProductTypeName" />
+            <PropertyRef Name="Game_Name" />
+            <PropertyRef Name="StatusName" />
+            <PropertyRef Name="Policyid" />
+            <PropertyRef Name="PolicyName" />
+          </Key>
+          <Property Name="Productid" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Departmentid" Type="int" />
+          <Property Name="DeptName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="ProductTypeid" Type="varchar" MaxLength="32" />
+          <Property Name="ProductTypeName" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="OBDate" Type="datetime" />
+          <Property Name="GameTypeid" Type="varchar" MaxLength="32" />
+          <Property Name="Game_Name" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="Statusid" Type="int" />
+          <Property Name="StatusName" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="Manager" Type="varchar" MaxLength="128" />
+          <Property Name="Policyid" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="PolicyName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsDone" Type="bit" />
+          <Property Name="Remark" Type="varchar" MaxLength="128" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_complain_order”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="v_complain_order">
+          <Key>
+            <PropertyRef Name="order_Id" />
+            <PropertyRef Name="productId" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Departmentname" />
+            <PropertyRef Name="complainId" />
+            <PropertyRef Name="complainName" />
+            <PropertyRef Name="oper_date" />
+            <PropertyRef Name="oper_user" />
+            <PropertyRef Name="endate" />
+          </Key>
+          <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="productId" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="Departmentid" Type="int" />
+          <Property Name="Departmentname" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="complainId" Type="int" Nullable="false" />
+          <Property Name="complainName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_date" Type="datetime" Nullable="false" />
+          <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="endate" Type="datetime" Nullable="false" />
+          <Property Name="last_oper" Type="varchar" MaxLength="64" />
+          <Property Name="last_memo" Type="text" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_declare_order”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="v_declare_order">
+          <Key>
+            <PropertyRef Name="order_Id" />
+            <PropertyRef Name="policyId" />
+            <PropertyRef Name="policyName" />
+            <PropertyRef Name="product_Id" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="dept_name" />
+            <PropertyRef Name="oper_user" />
+            <PropertyRef Name="oper_date" />
+          </Key>
+          <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="policyId" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="policyName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="product_Id" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="IsDone" Type="bit" />
+          <Property Name="dept_id" Type="int" />
+          <Property Name="dept_name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="oper_date" Type="datetime" Nullable="false" />
+          <Property Name="last_oper" Type="varchar" MaxLength="64" />
+          <Property Name="last_memo" Type="text" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_user_role”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="v_user_role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="user_name" Type="varchar" MaxLength="64" />
+          <Property Name="role_id" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="64" />
+          <Property Name="vcode" Type="varchar" MaxLength="64" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="policy_streamModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="policy_FlowEntities">
+          <EntitySet Name="approve_type" EntityType="policy_streamModel.approve_type" />
+          <EntitySet Name="aprove_user" EntityType="policy_streamModel.aprove_user" />
+          <EntitySet Name="bip_data" EntityType="policy_streamModel.bip_data" />
+          <EntitySet Name="complain" EntityType="policy_streamModel.complain" />
+          <EntitySet Name="dept" EntityType="policy_streamModel.dept" />
+          <EntitySet Name="game_status" EntityType="policy_streamModel.game_status" />
+          <EntitySet Name="game_type" EntityType="policy_streamModel.game_type" />
+          <EntitySet Name="policy" EntityType="policy_streamModel.policy" />
+          <EntitySet Name="product_type" EntityType="policy_streamModel.product_type" />
+          <EntitySet Name="role" EntityType="policy_streamModel.role" />
+          <EntitySet Name="t_page" EntityType="policy_streamModel.t_page" />
+          <EntitySet Name="t_user" EntityType="policy_streamModel.t_user" />
+          <EntitySet Name="v_user_role" EntityType="policy_streamModel.v_user_role" />
+          <EntitySet Name="v_bipdata" EntityType="policy_streamModel.v_bipdata" />
+          <EntitySet Name="declareflow" EntityType="policy_streamModel.declareflow" />
+          <EntitySet Name="declareorder" EntityType="policy_streamModel.declareorder" />
+          <EntitySet Name="v_approve_userlist" EntityType="policy_streamModel.v_approve_userlist" />
+          <EntitySet Name="v_declare_order" EntityType="policy_streamModel.v_declare_order" />
+          <EntitySet Name="complainorder" EntityType="policy_streamModel.complainorder" />
+          <EntitySet Name="complainflow" EntityType="policy_streamModel.complainflow" />
+          <EntitySet Name="v_complain_order" EntityType="policy_streamModel.v_complain_order" />
+        </EntityContainer>
+        <EntityType Name="approve_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aprove_user">
+          <Key>
+            <PropertyRef Name="pid" />
+            <PropertyRef Name="aid" />
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="pid" Type="Int32" Nullable="false" />
+          <Property Name="aid" Type="Int32" Nullable="false" />
+          <Property Name="uid" Type="Int32" Nullable="false" />
+          <Property Name="memo1" Type="String" />
+          <Property Name="memo2" Type="String" />
+          <Property Name="memo3" Type="String" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="bip_data">
+          <Key>
+            <PropertyRef Name="Productid" />
+            <PropertyRef Name="Policyid" />
+          </Key>
+          <Property Name="Productid" Type="String" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" />
+          <Property Name="Departmentid" Type="Int32" />
+          <Property Name="ProductTypeid" Type="String" />
+          <Property Name="OBDate" Type="DateTime" />
+          <Property Name="GameTypeid" Type="String" />
+          <Property Name="Statusid" Type="Int32" />
+          <Property Name="Manager" Type="String" />
+          <Property Name="Policyid" Type="String" Nullable="false" />
+          <Property Name="IsDone" Type="Boolean" />
+          <Property Name="Remark" Type="String" />
+          <Property Name="memo1" Type="String" />
+          <Property Name="memo2" Type="String" />
+          <Property Name="memo3" Type="String" />
+          <Property Name="memo4" Type="String" />
+          <Property Name="memo5" Type="String" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="complain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="dept">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="d_id" Type="Int32" Nullable="false" />
+          <Property Name="d_name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="game_status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s_id" Type="Int32" Nullable="false" />
+          <Property Name="s_name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="game_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="g_id" Type="String" Nullable="false" />
+          <Property Name="g_name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="policy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_id" Type="String" Nullable="false" />
+          <Property Name="p_name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="product_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_id" Type="String" Nullable="false" />
+          <Property Name="p_name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="memo" Type="String" />
+          <Property Name="vcode" Type="String" />
+        </EntityType>
+        <EntityType Name="t_page">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="page_name" Type="String" />
+          <Property Name="page_url" Type="String" />
+          <Property Name="isleaf" Type="String" />
+          <Property Name="parentid" Type="Int32" />
+          <Property Name="vcode" Type="String" />
+          <Property Name="is_shortcut" Type="String" />
+          <Property Name="is_show" Type="String" />
+          <Property Name="memo1" Type="String" />
+          <Property Name="memo2" Type="String" />
+          <Property Name="memo3" Type="String" />
+          <Property Name="memo" Type="String" />
+        </EntityType>
+        <EntityType Name="t_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="user_name" Type="String" />
+          <Property Name="role_id" Type="Int32" />
+          <Property Name="vcode" Type="String" />
+          <Property Name="memo3" Type="String" />
+          <Property Name="memo" Type="String" />
+          <Property Name="memo1" Type="String" />
+          <Property Name="memo2" Type="String" />
+        </EntityType>
+        <EntityType Name="v_user_role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="user_name" Type="String" />
+          <Property Name="role_id" Type="Int32" />
+          <Property Name="name" Type="String" />
+          <Property Name="vcode" Type="String" />
+        </EntityType>
+        <EntityType Name="v_bipdata">
+          <Key>
+            <PropertyRef Name="Productid" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="DeptName" />
+            <PropertyRef Name="ProductTypeName" />
+            <PropertyRef Name="Game_Name" />
+            <PropertyRef Name="StatusName" />
+            <PropertyRef Name="Policyid" />
+            <PropertyRef Name="PolicyName" />
+          </Key>
+          <Property Type="String" Name="Productid" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" />
+          <Property Type="Int32" Name="Departmentid" />
+          <Property Type="String" Name="DeptName" Nullable="false" />
+          <Property Type="String" Name="ProductTypeid" />
+          <Property Type="String" Name="ProductTypeName" Nullable="false" />
+          <Property Type="DateTime" Name="OBDate" />
+          <Property Type="String" Name="GameTypeid" />
+          <Property Type="String" Name="Game_Name" Nullable="false" />
+          <Property Type="Int32" Name="Statusid" />
+          <Property Type="String" Name="StatusName" Nullable="false" />
+          <Property Type="String" Name="Manager" />
+          <Property Type="String" Name="Policyid" Nullable="false" />
+          <Property Type="String" Name="PolicyName" Nullable="false" />
+          <Property Type="Boolean" Name="IsDone" />
+          <Property Type="String" Name="Remark" />
+        </EntityType>
+        <EntityType Name="declareflow">
+          <Key>
+            <PropertyRef Name="sn" />
+          </Key>
+          <Property Type="String" Name="sn" Nullable="false" />
+          <Property Type="String" Name="order_Id" Nullable="false" />
+          <Property Type="String" Name="oper_type" Nullable="false" />
+          <Property Type="String" Name="oper_memo" />
+          <Property Type="DateTime" Name="oper_date" Nullable="false" />
+          <Property Type="String" Name="oper_user" Nullable="false" />
+          <Property Type="String" Name="memo" />
+          <Property Type="String" Name="memo1" />
+          <Property Type="String" Name="memo2" />
+          <Property Type="String" Name="memo3" />
+          <Property Type="String" Name="memo4" />
+          <Property Type="String" Name="memo5" />
+        </EntityType>
+        <EntityType Name="declareorder">
+          <Key>
+            <PropertyRef Name="order_Id" />
+          </Key>
+          <Property Type="String" Name="order_Id" Nullable="false" />
+          <Property Type="String" Name="policyId" Nullable="false" />
+          <Property Type="String" Name="product_Id" Nullable="false" />
+          <Property Type="String" Name="oper_user" Nullable="false" />
+          <Property Type="DateTime" Name="oper_date" Nullable="false" />
+          <Property Type="Boolean" Name="staute" Nullable="false" />
+          <Property Type="String" Name="attach_url" Nullable="false" />
+          <Property Type="String" Name="memo" />
+          <Property Type="String" Name="next_oper" Nullable="false" />
+          <Property Type="String" Name="last_oper" />
+          <Property Type="DateTime" Name="last_oper_date" />
+          <Property Type="String" Name="memo1" />
+          <Property Type="String" Name="memo2" />
+          <Property Type="String" Name="memo3" />
+          <Property Type="String" Name="memo4" />
+          <Property Type="String" Name="memo5" />
+        </EntityType>
+        <EntityType Name="v_approve_userlist">
+          <Key>
+            <PropertyRef Name="uid" />
+            <PropertyRef Name="pid" />
+            <PropertyRef Name="p_id" />
+            <PropertyRef Name="p_name" />
+            <PropertyRef Name="aid" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Type="Int32" Name="uid" Nullable="false" />
+          <Property Type="String" Name="user_name" />
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="String" Name="p_id" Nullable="false" />
+          <Property Type="String" Name="p_name" Nullable="false" />
+          <Property Type="Int32" Name="aid" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" />
+        </EntityType>
+        <EntityType Name="v_declare_order">
+          <Key>
+            <PropertyRef Name="order_Id" />
+            <PropertyRef Name="policyId" />
+            <PropertyRef Name="policyName" />
+            <PropertyRef Name="product_Id" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="dept_name" />
+            <PropertyRef Name="oper_user" />
+            <PropertyRef Name="oper_date" />
+          </Key>
+          <Property Type="String" Name="order_Id" Nullable="false" />
+          <Property Type="String" Name="policyId" Nullable="false" />
+          <Property Type="String" Name="policyName" Nullable="false" />
+          <Property Type="String" Name="product_Id" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" />
+          <Property Type="Boolean" Name="IsDone" />
+          <Property Type="Int32" Name="dept_id" />
+          <Property Type="String" Name="dept_name" Nullable="false" />
+          <Property Type="String" Name="oper_user" Nullable="false" />
+          <Property Type="DateTime" Name="oper_date" Nullable="false" />
+          <Property Type="String" Name="last_oper" />
+          <Property Type="String" Name="last_memo" />
+        </EntityType>
+        <EntityType Name="complainorder">
+          <Key>
+            <PropertyRef Name="order_Id" />
+          </Key>
+          <Property Type="String" Name="order_Id" Nullable="false" />
+          <Property Type="String" Name="productId" Nullable="false" />
+          <Property Type="String" Name="productName" Nullable="false" />
+          <Property Type="Int32" Name="complainId" Nullable="false" />
+          <Property Type="String" Name="complainName" Nullable="false" />
+          <Property Type="String" Name="oper_user" Nullable="false" />
+          <Property Type="DateTime" Name="oper_date" Nullable="false" />
+          <Property Type="String" Name="next_oper" Nullable="false" />
+          <Property Type="String" Name="attach_url" Nullable="false" />
+          <Property Type="String" Name="memo" Nullable="false" />
+          <Property Type="DateTime" Name="endate" Nullable="false" />
+          <Property Type="String" Name="last_oper" />
+          <Property Type="DateTime" Name="last_oper_date" />
+          <Property Type="String" Name="last_memo" />
+          <Property Type="Boolean" Name="staute" />
+          <Property Type="String" Name="memo1" />
+          <Property Type="String" Name="memo2" />
+          <Property Type="String" Name="memo3" />
+          <Property Type="String" Name="memo4" />
+          <Property Type="String" Name="memo5" />
+        </EntityType>
+        <EntityType Name="complainflow">
+          <Key>
+            <PropertyRef Name="sn" />
+          </Key>
+          <Property Type="String" Name="sn" Nullable="false" />
+          <Property Type="String" Name="orderId" Nullable="false" />
+          <Property Type="String" Name="complainId" Nullable="false" />
+          <Property Type="String" Name="memo" />
+          <Property Type="String" Name="pm" Nullable="false" />
+          <Property Type="String" Name="attach_url" Nullable="false" />
+          <Property Type="String" Name="oper_memo" Nullable="false" />
+          <Property Type="String" Name="oper_type" Nullable="false" />
+          <Property Type="DateTime" Name="oper_date" Nullable="false" />
+          <Property Type="String" Name="oper_user" Nullable="false" />
+          <Property Type="String" Name="memo1" />
+          <Property Type="String" Name="memo2" />
+          <Property Type="String" Name="memo3" />
+          <Property Type="String" Name="memo4" />
+          <Property Type="String" Name="memo5" />
+        </EntityType>
+        <EntityType Name="v_complain_order">
+          <Key>
+            <PropertyRef Name="order_Id" />
+            <PropertyRef Name="productId" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Departmentname" />
+            <PropertyRef Name="complainId" />
+            <PropertyRef Name="complainName" />
+            <PropertyRef Name="oper_date" />
+            <PropertyRef Name="oper_user" />
+            <PropertyRef Name="endate" />
+          </Key>
+          <Property Type="String" Name="order_Id" Nullable="false" />
+          <Property Type="String" Name="productId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" />
+          <Property Type="Int32" Name="Departmentid" />
+          <Property Type="String" Name="Departmentname" Nullable="false" />
+          <Property Type="Int32" Name="complainId" Nullable="false" />
+          <Property Type="String" Name="complainName" Nullable="false" />
+          <Property Type="DateTime" Name="oper_date" Nullable="false" />
+          <Property Type="String" Name="oper_user" Nullable="false" />
+          <Property Type="DateTime" Name="endate" Nullable="false" />
+          <Property Type="String" Name="last_oper" />
+          <Property Type="String" Name="last_memo" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="policy_streamModelStoreContainer" CdmEntityContainer="policy_FlowEntities">
+          <EntitySetMapping Name="approve_type"><EntityTypeMapping TypeName="policy_streamModel.approve_type"><MappingFragment StoreEntitySet="approve_type">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aprove_user"><EntityTypeMapping TypeName="policy_streamModel.aprove_user"><MappingFragment StoreEntitySet="aprove_user">
+            <ScalarProperty Name="pid" ColumnName="pid" />
+            <ScalarProperty Name="aid" ColumnName="aid" />
+            <ScalarProperty Name="uid" ColumnName="uid" />
+            <ScalarProperty Name="memo1" ColumnName="memo1" />
+            <ScalarProperty Name="memo2" ColumnName="memo2" />
+            <ScalarProperty Name="memo3" ColumnName="memo3" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="bip_data"><EntityTypeMapping TypeName="policy_streamModel.bip_data"><MappingFragment StoreEntitySet="bip_data">
+            <ScalarProperty Name="Productid" ColumnName="Productid" />
+            <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+            <ScalarProperty Name="Departmentid" ColumnName="Departmentid" />
+            <ScalarProperty Name="ProductTypeid" ColumnName="ProductTypeid" />
+            <ScalarProperty Name="OBDate" ColumnName="OBDate" />
+            <ScalarProperty Name="GameTypeid" ColumnName="GameTypeid" />
+            <ScalarProperty Name="Statusid" ColumnName="Statusid" />
+            <ScalarProperty Name="Manager" ColumnName="Manager" />
+            <ScalarProperty Name="Policyid" ColumnName="Policyid" />
+            <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+            <ScalarProperty Name="Remark" ColumnName="Remark" />
+            <ScalarProperty Name="memo1" ColumnName="memo1" />
+            <ScalarProperty Name="memo2" ColumnName="memo2" />
+            <ScalarProperty Name="memo3" ColumnName="memo3" />
+            <ScalarProperty Name="memo4" ColumnName="memo4" />
+            <ScalarProperty Name="memo5" ColumnName="memo5" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="complain"><EntityTypeMapping TypeName="policy_streamModel.complain"><MappingFragment StoreEntitySet="complain">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dept"><EntityTypeMapping TypeName="policy_streamModel.dept"><MappingFragment StoreEntitySet="dept">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="d_id" ColumnName="d_id" />
+            <ScalarProperty Name="d_name" ColumnName="d_name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="game_status"><EntityTypeMapping TypeName="policy_streamModel.game_status"><MappingFragment StoreEntitySet="game_status">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="s_id" ColumnName="s_id" />
+            <ScalarProperty Name="s_name" ColumnName="s_name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="game_type"><EntityTypeMapping TypeName="policy_streamModel.game_type"><MappingFragment StoreEntitySet="game_type">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="g_id" ColumnName="g_id" />
+            <ScalarProperty Name="g_name" ColumnName="g_name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="policy"><EntityTypeMapping TypeName="policy_streamModel.policy"><MappingFragment StoreEntitySet="policy">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="p_id" ColumnName="p_id" />
+            <ScalarProperty Name="p_name" ColumnName="p_name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="product_type"><EntityTypeMapping TypeName="policy_streamModel.product_type"><MappingFragment StoreEntitySet="product_type">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="p_id" ColumnName="p_id" />
+            <ScalarProperty Name="p_name" ColumnName="p_name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="role"><EntityTypeMapping TypeName="policy_streamModel.role"><MappingFragment StoreEntitySet="role">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+            <ScalarProperty Name="vcode" ColumnName="vcode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t_page"><EntityTypeMapping TypeName="policy_streamModel.t_page"><MappingFragment StoreEntitySet="t_page">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="page_name" ColumnName="page_name" />
+            <ScalarProperty Name="page_url" ColumnName="page_url" />
+            <ScalarProperty Name="isleaf" ColumnName="isleaf" />
+            <ScalarProperty Name="parentid" ColumnName="parentid" />
+            <ScalarProperty Name="vcode" ColumnName="vcode" />
+            <ScalarProperty Name="is_shortcut" ColumnName="is_shortcut" />
+            <ScalarProperty Name="is_show" ColumnName="is_show" />
+            <ScalarProperty Name="memo1" ColumnName="memo1" />
+            <ScalarProperty Name="memo2" ColumnName="memo2" />
+            <ScalarProperty Name="memo3" ColumnName="memo3" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="t_user"><EntityTypeMapping TypeName="policy_streamModel.t_user"><MappingFragment StoreEntitySet="t_user">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="user_id" ColumnName="user_id" />
+            <ScalarProperty Name="user_name" ColumnName="user_name" />
+            <ScalarProperty Name="role_id" ColumnName="role_id" />
+            <ScalarProperty Name="vcode" ColumnName="vcode" />
+            <ScalarProperty Name="memo3" ColumnName="memo3" />
+            <ScalarProperty Name="memo" ColumnName="memo" />
+            <ScalarProperty Name="memo1" ColumnName="memo1" />
+            <ScalarProperty Name="memo2" ColumnName="memo2" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="v_user_role"><EntityTypeMapping TypeName="policy_streamModel.v_user_role"><MappingFragment StoreEntitySet="v_user_role">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="user_id" ColumnName="user_id" />
+            <ScalarProperty Name="user_name" ColumnName="user_name" />
+            <ScalarProperty Name="role_id" ColumnName="role_id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="vcode" ColumnName="vcode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="v_bipdata">
+            <EntityTypeMapping TypeName="policy_streamModel.v_bipdata">
+              <MappingFragment StoreEntitySet="v_bipdata">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+                <ScalarProperty Name="PolicyName" ColumnName="PolicyName" />
+                <ScalarProperty Name="Policyid" ColumnName="Policyid" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+                <ScalarProperty Name="Statusid" ColumnName="Statusid" />
+                <ScalarProperty Name="Game_Name" ColumnName="Game_Name" />
+                <ScalarProperty Name="GameTypeid" ColumnName="GameTypeid" />
+                <ScalarProperty Name="OBDate" ColumnName="OBDate" />
+                <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+                <ScalarProperty Name="ProductTypeid" ColumnName="ProductTypeid" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="Departmentid" ColumnName="Departmentid" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Productid" ColumnName="Productid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="declareflow">
+            <EntityTypeMapping TypeName="policy_streamModel.declareflow">
+              <MappingFragment StoreEntitySet="declareflow">
+                <ScalarProperty Name="memo5" ColumnName="memo5" />
+                <ScalarProperty Name="memo4" ColumnName="memo4" />
+                <ScalarProperty Name="memo3" ColumnName="memo3" />
+                <ScalarProperty Name="memo2" ColumnName="memo2" />
+                <ScalarProperty Name="memo1" ColumnName="memo1" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+                <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+                <ScalarProperty Name="oper_memo" ColumnName="oper_memo" />
+                <ScalarProperty Name="oper_type" ColumnName="oper_type" />
+                <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+                <ScalarProperty Name="sn" ColumnName="sn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="declareorder">
+            <EntityTypeMapping TypeName="policy_streamModel.declareorder">
+              <MappingFragment StoreEntitySet="declareorder">
+                <ScalarProperty Name="memo5" ColumnName="memo5" />
+                <ScalarProperty Name="memo4" ColumnName="memo4" />
+                <ScalarProperty Name="memo3" ColumnName="memo3" />
+                <ScalarProperty Name="memo2" ColumnName="memo2" />
+                <ScalarProperty Name="memo1" ColumnName="memo1" />
+                <ScalarProperty Name="last_oper_date" ColumnName="last_oper_date" />
+                <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+                <ScalarProperty Name="next_oper" ColumnName="next_oper" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="attach_url" ColumnName="attach_url" />
+                <ScalarProperty Name="staute" ColumnName="staute" />
+                <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+                <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+                <ScalarProperty Name="product_Id" ColumnName="product_Id" />
+                <ScalarProperty Name="policyId" ColumnName="policyId" />
+                <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_approve_userlist">
+            <EntityTypeMapping TypeName="policy_streamModel.v_approve_userlist">
+              <MappingFragment StoreEntitySet="v_approve_userlist">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="aid" ColumnName="aid" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_declare_order">
+            <EntityTypeMapping TypeName="policy_streamModel.v_declare_order">
+              <MappingFragment StoreEntitySet="v_declare_order">
+                <ScalarProperty Name="last_memo" ColumnName="last_memo" />
+                <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+                <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+                <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+                <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+                <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+                <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="product_Id" ColumnName="product_Id" />
+                <ScalarProperty Name="policyName" ColumnName="policyName" />
+                <ScalarProperty Name="policyId" ColumnName="policyId" />
+                <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="complainorder">
+            <EntityTypeMapping TypeName="policy_streamModel.complainorder">
+              <MappingFragment StoreEntitySet="complainorder">
+                <ScalarProperty Name="memo5" ColumnName="memo5" />
+                <ScalarProperty Name="memo4" ColumnName="memo4" />
+                <ScalarProperty Name="memo3" ColumnName="memo3" />
+                <ScalarProperty Name="memo2" ColumnName="memo2" />
+                <ScalarProperty Name="memo1" ColumnName="memo1" />
+                <ScalarProperty Name="staute" ColumnName="staute" />
+                <ScalarProperty Name="last_memo" ColumnName="last_memo" />
+                <ScalarProperty Name="last_oper_date" ColumnName="last_oper_date" />
+                <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+                <ScalarProperty Name="endate" ColumnName="endate" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="attach_url" ColumnName="attach_url" />
+                <ScalarProperty Name="next_oper" ColumnName="next_oper" />
+                <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+                <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+                <ScalarProperty Name="complainName" ColumnName="complainName" />
+                <ScalarProperty Name="complainId" ColumnName="complainId" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="complainflow">
+            <EntityTypeMapping TypeName="policy_streamModel.complainflow">
+              <MappingFragment StoreEntitySet="complainflow">
+                <ScalarProperty Name="memo5" ColumnName="memo5" />
+                <ScalarProperty Name="memo4" ColumnName="memo4" />
+                <ScalarProperty Name="memo3" ColumnName="memo3" />
+                <ScalarProperty Name="memo2" ColumnName="memo2" />
+                <ScalarProperty Name="memo1" ColumnName="memo1" />
+                <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+                <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+                <ScalarProperty Name="oper_type" ColumnName="oper_type" />
+                <ScalarProperty Name="oper_memo" ColumnName="oper_memo" />
+                <ScalarProperty Name="attach_url" ColumnName="attach_url" />
+                <ScalarProperty Name="pm" ColumnName="pm" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="complainId" ColumnName="complainId" />
+                <ScalarProperty Name="orderId" ColumnName="orderId" />
+                <ScalarProperty Name="sn" ColumnName="sn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_complain_order">
+            <EntityTypeMapping TypeName="policy_streamModel.v_complain_order">
+              <MappingFragment StoreEntitySet="v_complain_order">
+                <ScalarProperty Name="last_memo" ColumnName="last_memo" />
+                <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+                <ScalarProperty Name="endate" ColumnName="endate" />
+                <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+                <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+                <ScalarProperty Name="complainName" ColumnName="complainName" />
+                <ScalarProperty Name="complainId" ColumnName="complainId" />
+                <ScalarProperty Name="Departmentname" ColumnName="Departmentname" />
+                <ScalarProperty Name="Departmentid" ColumnName="Departmentid" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="policy_streamModel.approve_type" Width="1.5" PointX="0.75" PointY="0.75" Height="1.3969734700520831" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.aprove_user" Width="1.5" PointX="2.75" PointY="0.75" Height="2.3520719401041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.bip_data" Width="1.5" PointX="4.75" PointY="0.75" Height="4.2622688802083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.complain" Width="1.5" PointX="0.75" PointY="4.75" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.dept" Width="1.5" PointX="6.75" PointY="0.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.game_status" Width="1.5" PointX="2.75" PointY="6.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.game_type" Width="1.5" PointX="6.75" PointY="3.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.policy" Width="1.5" PointX="4.75" PointY="6.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.product_type" Width="1.5" PointX="6.75" PointY="6.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.role" Width="1.5" PointX="8.75" PointY="0.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.t_page" Width="1.5" PointX="8.75" PointY="3.75" Height="3.3071704101562531" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.t_user" Width="1.5" PointX="8.75" PointY="8.75" Height="2.7341113281250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.v_user_role" Width="1.5" PointX="0.75" PointY="9.75" Height="2.1610522460937531" IsExpanded="true" />
+        <EntityTypeShape EntityType="policy_streamModel.v_bipdata" Width="1.5" PointX="3.375" PointY="9.75" Height="4.0712491861979174" />
+        <EntityTypeShape EntityType="policy_streamModel.declareflow" Width="1.5" PointX="5.375" PointY="9.75" Height="3.3071704101562531" />
+        <EntityTypeShape EntityType="policy_streamModel.declareorder" Width="1.5" PointX="11.375" PointY="0.75" Height="4.0712491861979174" />
+        <EntityTypeShape EntityType="policy_streamModel.v_approve_userlist" Width="1.5" PointX="11.375" PointY="5.75" Height="2.3520719401041674" />
+        <EntityTypeShape EntityType="policy_streamModel.v_declare_order" Width="1.5" PointX="11.375" PointY="9.75" Height="3.3071704101562531" />
+        <EntityTypeShape EntityType="policy_streamModel.complainorder" Width="1.5" PointX="7.75" PointY="12.75" Height="4.8353279622395782" />
+        <EntityTypeShape EntityType="policy_streamModel.complainflow" Width="1.5" PointX="0.75" PointY="12.75" Height="3.8802294921875031" />
+        <EntityTypeShape EntityType="policy_streamModel.v_complain_order" Width="1.5" PointX="13.375" PointY="0.75" Height="3.3071704101562531" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
