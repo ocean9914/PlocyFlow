@@ -1,0 +1,1 @@
+D:\Csharp\PolicyFlow\TestBipMessageConsole\bin\Debug\TestBipMessageConsole.exe.config

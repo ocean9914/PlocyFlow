@@ -1,0 +1,1 @@
+D:\Csharp\PolicyFlow\TestBipMessageConsole\obj\x86\Release\TestBipMessageConsole.csprojResolveAssemblyReference.cache

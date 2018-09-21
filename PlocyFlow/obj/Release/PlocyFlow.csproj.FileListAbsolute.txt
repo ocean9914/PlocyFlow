@@ -1,0 +1,17 @@
+D:\csharp\PolicyFlow\PlocyFlow\bin\PlocyFlow.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\PlocyFlow.pdb
+D:\csharp\PolicyFlow\PlocyFlow\bin\PlocyFlow.DAL.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\log4net.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\PlocyFlow.DAL.pdb
+D:\csharp\PolicyFlow\PlocyFlow\obj\Release\PlocyFlow.dll
+D:\csharp\PolicyFlow\PlocyFlow\obj\Release\PlocyFlow.pdb
+D:\csharp\PolicyFlow\PlocyFlow\bin\System.Web.Mvc.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\System.Web.Mvc.xml
+D:\csharp\PolicyFlow\PlocyFlow\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\MySql.Data.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\Tencent.OA.Framework.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\SourceCode.Workflow.Client.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\KO.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\SourceCode.HostClientAPI.dll
+D:\csharp\PolicyFlow\PlocyFlow\bin\Tencent.OA.Framework.xml
+D:\csharp\PolicyFlow\PlocyFlow\obj\Release\PlocyFlow.csprojResolveAssemblyReference.cache

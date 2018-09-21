@@ -1,0 +1,6 @@
+D:\csharp\PolicyFlow\PlocyFlow.DAL\bin\Release\PlocyFlow.DAL.dll.config
+D:\csharp\PolicyFlow\PlocyFlow.DAL\bin\Release\PlocyFlow.DAL.dll
+D:\csharp\PolicyFlow\PlocyFlow.DAL\bin\Release\PlocyFlow.DAL.pdb
+D:\csharp\PolicyFlow\PlocyFlow.DAL\obj\Release\PlocyFlow.DAL.dll
+D:\csharp\PolicyFlow\PlocyFlow.DAL\obj\Release\PlocyFlow.DAL.pdb
+D:\csharp\PolicyFlow\PlocyFlow.DAL\obj\Release\PlocyFlow.DAL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="policy_streamModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="policy_FlowEntities">
+    <EntitySet Name="approve_type" EntityType="policy_streamModel.approve_type" />
+    <EntitySet Name="aprove_user" EntityType="policy_streamModel.aprove_user" />
+    <EntitySet Name="bip_data" EntityType="policy_streamModel.bip_data" />
+    <EntitySet Name="complain" EntityType="policy_streamModel.complain" />
+    <EntitySet Name="dept" EntityType="policy_streamModel.dept" />
+    <EntitySet Name="game_status" EntityType="policy_streamModel.game_status" />
+    <EntitySet Name="game_type" EntityType="policy_streamModel.game_type" />
+    <EntitySet Name="policy" EntityType="policy_streamModel.policy" />
+    <EntitySet Name="product_type" EntityType="policy_streamModel.product_type" />
+    <EntitySet Name="role" EntityType="policy_streamModel.role" />
+    <EntitySet Name="t_page" EntityType="policy_streamModel.t_page" />
+    <EntitySet Name="t_user" EntityType="policy_streamModel.t_user" />
+    <EntitySet Name="v_user_role" EntityType="policy_streamModel.v_user_role" />
+    <EntitySet Name="v_bipdata" EntityType="policy_streamModel.v_bipdata" />
+    <EntitySet Name="declareflow" EntityType="policy_streamModel.declareflow" />
+    <EntitySet Name="declareorder" EntityType="policy_streamModel.declareorder" />
+    <EntitySet Name="v_approve_userlist" EntityType="policy_streamModel.v_approve_userlist" />
+    <EntitySet Name="v_declare_order" EntityType="policy_streamModel.v_declare_order" />
+    <EntitySet Name="complainorder" EntityType="policy_streamModel.complainorder" />
+    <EntitySet Name="complainflow" EntityType="policy_streamModel.complainflow" />
+    <EntitySet Name="v_complain_order" EntityType="policy_streamModel.v_complain_order" />
+  </EntityContainer>
+  <EntityType Name="approve_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aprove_user">
+    <Key>
+      <PropertyRef Name="pid" />
+      <PropertyRef Name="aid" />
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="pid" Type="Int32" Nullable="false" />
+    <Property Name="aid" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="memo1" Type="String" />
+    <Property Name="memo2" Type="String" />
+    <Property Name="memo3" Type="String" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="bip_data">
+    <Key>
+      <PropertyRef Name="Productid" />
+      <PropertyRef Name="Policyid" />
+    </Key>
+    <Property Name="Productid" Type="String" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" />
+    <Property Name="Departmentid" Type="Int32" />
+    <Property Name="ProductTypeid" Type="String" />
+    <Property Name="OBDate" Type="DateTime" />
+    <Property Name="GameTypeid" Type="String" />
+    <Property Name="Statusid" Type="Int32" />
+    <Property Name="Manager" Type="String" />
+    <Property Name="Policyid" Type="String" Nullable="false" />
+    <Property Name="IsDone" Type="Boolean" />
+    <Property Name="Remark" Type="String" />
+    <Property Name="memo1" Type="String" />
+    <Property Name="memo2" Type="String" />
+    <Property Name="memo3" Type="String" />
+    <Property Name="memo4" Type="String" />
+    <Property Name="memo5" Type="String" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="complain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="dept">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="d_id" Type="Int32" Nullable="false" />
+    <Property Name="d_name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="game_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_id" Type="Int32" Nullable="false" />
+    <Property Name="s_name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="game_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="g_id" Type="String" Nullable="false" />
+    <Property Name="g_name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="policy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="p_id" Type="String" Nullable="false" />
+    <Property Name="p_name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="product_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="p_id" Type="String" Nullable="false" />
+    <Property Name="p_name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="memo" Type="String" />
+    <Property Name="vcode" Type="String" />
+  </EntityType>
+  <EntityType Name="t_page">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="page_name" Type="String" />
+    <Property Name="page_url" Type="String" />
+    <Property Name="isleaf" Type="String" />
+    <Property Name="parentid" Type="Int32" />
+    <Property Name="vcode" Type="String" />
+    <Property Name="is_shortcut" Type="String" />
+    <Property Name="is_show" Type="String" />
+    <Property Name="memo1" Type="String" />
+    <Property Name="memo2" Type="String" />
+    <Property Name="memo3" Type="String" />
+    <Property Name="memo" Type="String" />
+  </EntityType>
+  <EntityType Name="t_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="user_name" Type="String" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="vcode" Type="String" />
+    <Property Name="memo3" Type="String" />
+    <Property Name="memo" Type="String" />
+    <Property Name="memo1" Type="String" />
+    <Property Name="memo2" Type="String" />
+  </EntityType>
+  <EntityType Name="v_user_role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="user_name" Type="String" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="name" Type="String" />
+    <Property Name="vcode" Type="String" />
+  </EntityType>
+  <EntityType Name="v_bipdata">
+    <Key>
+      <PropertyRef Name="Productid" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="DeptName" />
+      <PropertyRef Name="ProductTypeName" />
+      <PropertyRef Name="Game_Name" />
+      <PropertyRef Name="StatusName" />
+      <PropertyRef Name="Policyid" />
+      <PropertyRef Name="PolicyName" />
+    </Key>
+    <Property Type="String" Name="Productid" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" />
+    <Property Type="Int32" Name="Departmentid" />
+    <Property Type="String" Name="DeptName" Nullable="false" />
+    <Property Type="String" Name="ProductTypeid" />
+    <Property Type="String" Name="ProductTypeName" Nullable="false" />
+    <Property Type="DateTime" Name="OBDate" />
+    <Property Type="String" Name="GameTypeid" />
+    <Property Type="String" Name="Game_Name" Nullable="false" />
+    <Property Type="Int32" Name="Statusid" />
+    <Property Type="String" Name="StatusName" Nullable="false" />
+    <Property Type="String" Name="Manager" />
+    <Property Type="String" Name="Policyid" Nullable="false" />
+    <Property Type="String" Name="PolicyName" Nullable="false" />
+    <Property Type="Boolean" Name="IsDone" />
+    <Property Type="String" Name="Remark" />
+  </EntityType>
+  <EntityType Name="declareflow">
+    <Key>
+      <PropertyRef Name="sn" />
+    </Key>
+    <Property Type="String" Name="sn" Nullable="false" />
+    <Property Type="String" Name="order_Id" Nullable="false" />
+    <Property Type="String" Name="oper_type" Nullable="false" />
+    <Property Type="String" Name="oper_memo" />
+    <Property Type="DateTime" Name="oper_date" Nullable="false" />
+    <Property Type="String" Name="oper_user" Nullable="false" />
+    <Property Type="String" Name="memo" />
+    <Property Type="String" Name="memo1" />
+    <Property Type="String" Name="memo2" />
+    <Property Type="String" Name="memo3" />
+    <Property Type="String" Name="memo4" />
+    <Property Type="String" Name="memo5" />
+  </EntityType>
+  <EntityType Name="declareorder">
+    <Key>
+      <PropertyRef Name="order_Id" />
+    </Key>
+    <Property Type="String" Name="order_Id" Nullable="false" />
+    <Property Type="String" Name="policyId" Nullable="false" />
+    <Property Type="String" Name="product_Id" Nullable="false" />
+    <Property Type="String" Name="oper_user" Nullable="false" />
+    <Property Type="DateTime" Name="oper_date" Nullable="false" />
+    <Property Type="Boolean" Name="staute" Nullable="false" />
+    <Property Type="String" Name="attach_url" Nullable="false" />
+    <Property Type="String" Name="memo" />
+    <Property Type="String" Name="next_oper" Nullable="false" />
+    <Property Type="String" Name="last_oper" />
+    <Property Type="DateTime" Name="last_oper_date" />
+    <Property Type="String" Name="memo1" />
+    <Property Type="String" Name="memo2" />
+    <Property Type="String" Name="memo3" />
+    <Property Type="String" Name="memo4" />
+    <Property Type="String" Name="memo5" />
+  </EntityType>
+  <EntityType Name="v_approve_userlist">
+    <Key>
+      <PropertyRef Name="uid" />
+      <PropertyRef Name="pid" />
+      <PropertyRef Name="p_id" />
+      <PropertyRef Name="p_name" />
+      <PropertyRef Name="aid" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Type="Int32" Name="uid" Nullable="false" />
+    <Property Type="String" Name="user_name" />
+    <Property Type="Int32" Name="pid" Nullable="false" />
+    <Property Type="String" Name="p_id" Nullable="false" />
+    <Property Type="String" Name="p_name" Nullable="false" />
+    <Property Type="Int32" Name="aid" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" />
+  </EntityType>
+  <EntityType Name="v_declare_order">
+    <Key>
+      <PropertyRef Name="order_Id" />
+      <PropertyRef Name="policyId" />
+      <PropertyRef Name="policyName" />
+      <PropertyRef Name="product_Id" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="dept_name" />
+      <PropertyRef Name="oper_user" />
+      <PropertyRef Name="oper_date" />
+    </Key>
+    <Property Type="String" Name="order_Id" Nullable="false" />
+    <Property Type="String" Name="policyId" Nullable="false" />
+    <Property Type="String" Name="policyName" Nullable="false" />
+    <Property Type="String" Name="product_Id" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" />
+    <Property Type="Boolean" Name="IsDone" />
+    <Property Type="Int32" Name="dept_id" />
+    <Property Type="String" Name="dept_name" Nullable="false" />
+    <Property Type="String" Name="oper_user" Nullable="false" />
+    <Property Type="DateTime" Name="oper_date" Nullable="false" />
+    <Property Type="String" Name="last_oper" />
+    <Property Type="String" Name="last_memo" />
+  </EntityType>
+  <EntityType Name="complainorder">
+    <Key>
+      <PropertyRef Name="order_Id" />
+    </Key>
+    <Property Type="String" Name="order_Id" Nullable="false" />
+    <Property Type="String" Name="productId" Nullable="false" />
+    <Property Type="String" Name="productName" Nullable="false" />
+    <Property Type="Int32" Name="complainId" Nullable="false" />
+    <Property Type="String" Name="complainName" Nullable="false" />
+    <Property Type="String" Name="oper_user" Nullable="false" />
+    <Property Type="DateTime" Name="oper_date" Nullable="false" />
+    <Property Type="String" Name="next_oper" Nullable="false" />
+    <Property Type="String" Name="attach_url" Nullable="false" />
+    <Property Type="String" Name="memo" Nullable="false" />
+    <Property Type="DateTime" Name="endate" Nullable="false" />
+    <Property Type="String" Name="last_oper" />
+    <Property Type="DateTime" Name="last_oper_date" />
+    <Property Type="String" Name="last_memo" />
+    <Property Type="Boolean" Name="staute" />
+    <Property Type="String" Name="memo1" />
+    <Property Type="String" Name="memo2" />
+    <Property Type="String" Name="memo3" />
+    <Property Type="String" Name="memo4" />
+    <Property Type="String" Name="memo5" />
+  </EntityType>
+  <EntityType Name="complainflow">
+    <Key>
+      <PropertyRef Name="sn" />
+    </Key>
+    <Property Type="String" Name="sn" Nullable="false" />
+    <Property Type="String" Name="orderId" Nullable="false" />
+    <Property Type="String" Name="complainId" Nullable="false" />
+    <Property Type="String" Name="memo" />
+    <Property Type="String" Name="pm" Nullable="false" />
+    <Property Type="String" Name="attach_url" Nullable="false" />
+    <Property Type="String" Name="oper_memo" Nullable="false" />
+    <Property Type="String" Name="oper_type" Nullable="false" />
+    <Property Type="DateTime" Name="oper_date" Nullable="false" />
+    <Property Type="String" Name="oper_user" Nullable="false" />
+    <Property Type="String" Name="memo1" />
+    <Property Type="String" Name="memo2" />
+    <Property Type="String" Name="memo3" />
+    <Property Type="String" Name="memo4" />
+    <Property Type="String" Name="memo5" />
+  </EntityType>
+  <EntityType Name="v_complain_order">
+    <Key>
+      <PropertyRef Name="order_Id" />
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Departmentname" />
+      <PropertyRef Name="complainId" />
+      <PropertyRef Name="complainName" />
+      <PropertyRef Name="oper_date" />
+      <PropertyRef Name="oper_user" />
+      <PropertyRef Name="endate" />
+    </Key>
+    <Property Type="String" Name="order_Id" Nullable="false" />
+    <Property Type="String" Name="productId" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" />
+    <Property Type="Int32" Name="Departmentid" />
+    <Property Type="String" Name="Departmentname" Nullable="false" />
+    <Property Type="Int32" Name="complainId" Nullable="false" />
+    <Property Type="String" Name="complainName" Nullable="false" />
+    <Property Type="DateTime" Name="oper_date" Nullable="false" />
+    <Property Type="String" Name="oper_user" Nullable="false" />
+    <Property Type="DateTime" Name="endate" Nullable="false" />
+    <Property Type="String" Name="last_oper" />
+    <Property Type="String" Name="last_memo" />
+  </EntityType>
+</Schema>

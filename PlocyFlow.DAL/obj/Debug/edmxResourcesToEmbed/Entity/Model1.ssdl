@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="policy_streamModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="policy_streamModelStoreContainer">
+    <EntitySet Name="approve_type" EntityType="policy_streamModel.Store.approve_type" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="aprove_user" EntityType="policy_streamModel.Store.aprove_user" store:Type="Tables" store:Schema="policy_stream" store:Name="aprove_user">
+      <DefiningQuery>SELECT
+      `aprove_user`.`pid`, 
+      `aprove_user`.`aid`, 
+      `aprove_user`.`uid`, 
+      `aprove_user`.`memo1`, 
+      `aprove_user`.`memo2`, 
+      `aprove_user`.`memo3`, 
+      `aprove_user`.`memo`
+      FROM `aprove_user` AS `aprove_user`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="bip_data" EntityType="policy_streamModel.Store.bip_data" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="complain" EntityType="policy_streamModel.Store.complain" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="complainflow" EntityType="policy_streamModel.Store.complainflow" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="complainorder" EntityType="policy_streamModel.Store.complainorder" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="declareflow" EntityType="policy_streamModel.Store.declareflow" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="declareorder" EntityType="policy_streamModel.Store.declareorder" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="dept" EntityType="policy_streamModel.Store.dept" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="game_status" EntityType="policy_streamModel.Store.game_status" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="game_type" EntityType="policy_streamModel.Store.game_type" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="policy" EntityType="policy_streamModel.Store.policy" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="product_type" EntityType="policy_streamModel.Store.product_type" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="role" EntityType="policy_streamModel.Store.role" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="t_page" EntityType="policy_streamModel.Store.t_page" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="t_user" EntityType="policy_streamModel.Store.t_user" store:Type="Tables" Schema="policy_stream" />
+    <EntitySet Name="v_approve_userlist" EntityType="policy_streamModel.Store.v_approve_userlist" store:Type="Views" store:Schema="policy_stream" store:Name="v_approve_userlist">
+      <DefiningQuery>SELECT
+      `v_approve_userlist`.`uid`, 
+      `v_approve_userlist`.`user_name`, 
+      `v_approve_userlist`.`pid`, 
+      `v_approve_userlist`.`p_id`, 
+      `v_approve_userlist`.`p_name`, 
+      `v_approve_userlist`.`aid`, 
+      `v_approve_userlist`.`name`
+      FROM `v_approve_userlist` AS `v_approve_userlist`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_bipdata" EntityType="policy_streamModel.Store.v_bipdata" store:Type="Views" store:Schema="policy_stream" store:Name="v_bipdata">
+      <DefiningQuery>SELECT
+      `v_bipdata`.`Productid`, 
+      `v_bipdata`.`ProductName`, 
+      `v_bipdata`.`Departmentid`, 
+      `v_bipdata`.`DeptName`, 
+      `v_bipdata`.`ProductTypeid`, 
+      `v_bipdata`.`ProductTypeName`, 
+      `v_bipdata`.`OBDate`, 
+      `v_bipdata`.`GameTypeid`, 
+      `v_bipdata`.`Game_Name`, 
+      `v_bipdata`.`Statusid`, 
+      `v_bipdata`.`StatusName`, 
+      `v_bipdata`.`Manager`, 
+      `v_bipdata`.`Policyid`, 
+      `v_bipdata`.`PolicyName`, 
+      `v_bipdata`.`IsDone`, 
+      `v_bipdata`.`Remark`
+      FROM `v_bipdata` AS `v_bipdata`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_complain_order" EntityType="policy_streamModel.Store.v_complain_order" store:Type="Views" store:Schema="policy_stream" store:Name="v_complain_order">
+      <DefiningQuery>SELECT
+      `v_complain_order`.`order_Id`, 
+      `v_complain_order`.`productId`, 
+      `v_complain_order`.`ProductName`, 
+      `v_complain_order`.`Departmentid`, 
+      `v_complain_order`.`Departmentname`, 
+      `v_complain_order`.`complainId`, 
+      `v_complain_order`.`complainName`, 
+      `v_complain_order`.`oper_date`, 
+      `v_complain_order`.`oper_user`, 
+      `v_complain_order`.`endate`, 
+      `v_complain_order`.`last_oper`, 
+      `v_complain_order`.`last_memo`
+      FROM `v_complain_order` AS `v_complain_order`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_declare_order" EntityType="policy_streamModel.Store.v_declare_order" store:Type="Views" store:Schema="policy_stream" store:Name="v_declare_order">
+      <DefiningQuery>SELECT
+      `v_declare_order`.`order_Id`, 
+      `v_declare_order`.`policyId`, 
+      `v_declare_order`.`policyName`, 
+      `v_declare_order`.`product_Id`, 
+      `v_declare_order`.`ProductName`, 
+      `v_declare_order`.`IsDone`, 
+      `v_declare_order`.`dept_id`, 
+      `v_declare_order`.`dept_name`, 
+      `v_declare_order`.`oper_user`, 
+      `v_declare_order`.`oper_date`, 
+      `v_declare_order`.`last_oper`, 
+      `v_declare_order`.`last_memo`
+      FROM `v_declare_order` AS `v_declare_order`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_user_role" EntityType="policy_streamModel.Store.v_user_role" store:Type="Views" store:Schema="policy_stream" store:Name="v_user_role">
+      <DefiningQuery>SELECT
+      `v_user_role`.`id`, 
+      `v_user_role`.`user_id`, 
+      `v_user_role`.`user_name`, 
+      `v_user_role`.`role_id`, 
+      `v_user_role`.`name`, 
+      `v_user_role`.`vcode`
+      FROM `v_user_role` AS `v_user_role`</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="approve_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="16" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.aprove_user”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="aprove_user">
+    <Key>
+      <PropertyRef Name="pid" />
+      <PropertyRef Name="aid" />
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="pid" Type="int" Nullable="false" />
+    <Property Name="aid" Type="int" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="memo1" Type="varchar" MaxLength="64" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="bip_data">
+    <Key>
+      <PropertyRef Name="Productid" />
+      <PropertyRef Name="Policyid" />
+    </Key>
+    <Property Name="Productid" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="Departmentid" Type="int" />
+    <Property Name="ProductTypeid" Type="varchar" MaxLength="32" />
+    <Property Name="OBDate" Type="datetime" />
+    <Property Name="GameTypeid" Type="varchar" MaxLength="32" />
+    <Property Name="Statusid" Type="int" />
+    <Property Name="Manager" Type="varchar" MaxLength="128" />
+    <Property Name="Policyid" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="IsDone" Type="bit" />
+    <Property Name="Remark" Type="varchar" MaxLength="128" />
+    <Property Name="memo1" Type="varchar" MaxLength="64" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="64" />
+    <Property Name="memo4" Type="varchar" MaxLength="64" />
+    <Property Name="memo5" Type="varchar" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="complain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="complainflow">
+    <Key>
+      <PropertyRef Name="sn" />
+    </Key>
+    <Property Name="sn" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="orderId" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="complainId" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+    <Property Name="pm" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="attach_url" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="oper_memo" Type="text" Nullable="false" />
+    <Property Name="oper_type" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="oper_date" Type="datetime" Nullable="false" />
+    <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo1" Type="varchar" MaxLength="64" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="64" />
+    <Property Name="memo4" Type="varchar" MaxLength="64" />
+    <Property Name="memo5" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="complainorder">
+    <Key>
+      <PropertyRef Name="order_Id" />
+    </Key>
+    <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="productId" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="productName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="complainId" Type="int" Nullable="false" />
+    <Property Name="complainName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_date" Type="datetime" Nullable="false" />
+    <Property Name="next_oper" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="attach_url" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="memo" Type="text" Nullable="false" />
+    <Property Name="endate" Type="datetime" Nullable="false" />
+    <Property Name="last_oper" Type="varchar" MaxLength="64" />
+    <Property Name="last_oper_date" Type="datetime" />
+    <Property Name="last_memo" Type="text" />
+    <Property Name="staute" Type="bit" />
+    <Property Name="memo1" Type="varchar" MaxLength="64" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="64" />
+    <Property Name="memo4" Type="varchar" MaxLength="64" />
+    <Property Name="memo5" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="declareflow">
+    <Key>
+      <PropertyRef Name="sn" />
+    </Key>
+    <Property Name="sn" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_type" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="oper_memo" Type="text" />
+    <Property Name="oper_date" Type="datetime" Nullable="false" />
+    <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+    <Property Name="memo1" Type="varchar" MaxLength="64" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="64" />
+    <Property Name="memo4" Type="varchar" MaxLength="64" />
+    <Property Name="memo5" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="declareorder">
+    <Key>
+      <PropertyRef Name="order_Id" />
+    </Key>
+    <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="policyId" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="product_Id" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_date" Type="datetime" Nullable="false" />
+    <Property Name="staute" Type="bit" Nullable="false" />
+    <Property Name="attach_url" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="memo" Type="text" />
+    <Property Name="next_oper" Type="varchar" Nullable="false" MaxLength="512" />
+    <Property Name="last_oper" Type="varchar" MaxLength="64" />
+    <Property Name="last_oper_date" Type="datetime" />
+    <Property Name="memo1" Type="text" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="64" />
+    <Property Name="memo4" Type="varchar" MaxLength="64" />
+    <Property Name="memo5" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="dept">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="d_id" Type="int" Nullable="false" />
+    <Property Name="d_name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="game_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="s_id" Type="int" Nullable="false" />
+    <Property Name="s_name" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="game_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="g_id" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="g_name" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="policy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="p_id" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="p_name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="product_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="p_id" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="p_name" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="memo" Type="varchar" MaxLength="64" />
+    <Property Name="vcode" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="t_page">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="page_name" Type="varchar" MaxLength="50" />
+    <Property Name="page_url" Type="varchar" MaxLength="50" />
+    <Property Name="isleaf" Type="varchar" MaxLength="1" />
+    <Property Name="parentid" Type="int" />
+    <Property Name="vcode" Type="varchar" MaxLength="64" />
+    <Property Name="is_shortcut" Type="varchar" MaxLength="1" />
+    <Property Name="is_show" Type="varchar" MaxLength="1" />
+    <Property Name="memo1" Type="varchar" MaxLength="32" />
+    <Property Name="memo2" Type="varchar" MaxLength="32" />
+    <Property Name="memo3" Type="varchar" MaxLength="32" />
+    <Property Name="memo" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="t_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="user_name" Type="varchar" MaxLength="64" />
+    <Property Name="role_id" Type="int" />
+    <Property Name="vcode" Type="varchar" MaxLength="64" />
+    <Property Name="memo3" Type="varchar" MaxLength="32" />
+    <Property Name="memo" Type="varchar" MaxLength="32" />
+    <Property Name="memo1" Type="varchar" MaxLength="64" />
+    <Property Name="memo2" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_approve_userlist”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="v_approve_userlist">
+    <Key>
+      <PropertyRef Name="uid" />
+      <PropertyRef Name="pid" />
+      <PropertyRef Name="p_id" />
+      <PropertyRef Name="p_name" />
+      <PropertyRef Name="aid" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="user_name" Type="varchar" MaxLength="64" />
+    <Property Name="pid" Type="int" Nullable="false" />
+    <Property Name="p_id" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="p_name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="aid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="16" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_bipdata”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="v_bipdata">
+    <Key>
+      <PropertyRef Name="Productid" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="DeptName" />
+      <PropertyRef Name="ProductTypeName" />
+      <PropertyRef Name="Game_Name" />
+      <PropertyRef Name="StatusName" />
+      <PropertyRef Name="Policyid" />
+      <PropertyRef Name="PolicyName" />
+    </Key>
+    <Property Name="Productid" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="Departmentid" Type="int" />
+    <Property Name="DeptName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="ProductTypeid" Type="varchar" MaxLength="32" />
+    <Property Name="ProductTypeName" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="OBDate" Type="datetime" />
+    <Property Name="GameTypeid" Type="varchar" MaxLength="32" />
+    <Property Name="Game_Name" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="Statusid" Type="int" />
+    <Property Name="StatusName" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="Manager" Type="varchar" MaxLength="128" />
+    <Property Name="Policyid" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="PolicyName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="IsDone" Type="bit" />
+    <Property Name="Remark" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_complain_order”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="v_complain_order">
+    <Key>
+      <PropertyRef Name="order_Id" />
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Departmentname" />
+      <PropertyRef Name="complainId" />
+      <PropertyRef Name="complainName" />
+      <PropertyRef Name="oper_date" />
+      <PropertyRef Name="oper_user" />
+      <PropertyRef Name="endate" />
+    </Key>
+    <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="productId" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="Departmentid" Type="int" />
+    <Property Name="Departmentname" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="complainId" Type="int" Nullable="false" />
+    <Property Name="complainName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_date" Type="datetime" Nullable="false" />
+    <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="endate" Type="datetime" Nullable="false" />
+    <Property Name="last_oper" Type="varchar" MaxLength="64" />
+    <Property Name="last_memo" Type="text" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_declare_order”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="v_declare_order">
+    <Key>
+      <PropertyRef Name="order_Id" />
+      <PropertyRef Name="policyId" />
+      <PropertyRef Name="policyName" />
+      <PropertyRef Name="product_Id" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="dept_name" />
+      <PropertyRef Name="oper_user" />
+      <PropertyRef Name="oper_date" />
+    </Key>
+    <Property Name="order_Id" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="policyId" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="policyName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="product_Id" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="IsDone" Type="bit" />
+    <Property Name="dept_id" Type="int" />
+    <Property Name="dept_name" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_user" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="oper_date" Type="datetime" Nullable="false" />
+    <Property Name="last_oper" Type="varchar" MaxLength="64" />
+    <Property Name="last_memo" Type="text" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“def.policy_stream.v_user_role”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="v_user_role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="user_name" Type="varchar" MaxLength="64" />
+    <Property Name="role_id" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="64" />
+    <Property Name="vcode" Type="varchar" MaxLength="64" />
+  </EntityType>
+</Schema>

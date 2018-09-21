@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="policy_streamModelStoreContainer" CdmEntityContainer="policy_FlowEntities">
+    <EntitySetMapping Name="approve_type">
+      <EntityTypeMapping TypeName="policy_streamModel.approve_type">
+        <MappingFragment StoreEntitySet="approve_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aprove_user">
+      <EntityTypeMapping TypeName="policy_streamModel.aprove_user">
+        <MappingFragment StoreEntitySet="aprove_user">
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="aid" ColumnName="aid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bip_data">
+      <EntityTypeMapping TypeName="policy_streamModel.bip_data">
+        <MappingFragment StoreEntitySet="bip_data">
+          <ScalarProperty Name="Productid" ColumnName="Productid" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Departmentid" ColumnName="Departmentid" />
+          <ScalarProperty Name="ProductTypeid" ColumnName="ProductTypeid" />
+          <ScalarProperty Name="OBDate" ColumnName="OBDate" />
+          <ScalarProperty Name="GameTypeid" ColumnName="GameTypeid" />
+          <ScalarProperty Name="Statusid" ColumnName="Statusid" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Policyid" ColumnName="Policyid" />
+          <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo4" ColumnName="memo4" />
+          <ScalarProperty Name="memo5" ColumnName="memo5" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="complain">
+      <EntityTypeMapping TypeName="policy_streamModel.complain">
+        <MappingFragment StoreEntitySet="complain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dept">
+      <EntityTypeMapping TypeName="policy_streamModel.dept">
+        <MappingFragment StoreEntitySet="dept">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="d_id" ColumnName="d_id" />
+          <ScalarProperty Name="d_name" ColumnName="d_name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_status">
+      <EntityTypeMapping TypeName="policy_streamModel.game_status">
+        <MappingFragment StoreEntitySet="game_status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_type">
+      <EntityTypeMapping TypeName="policy_streamModel.game_type">
+        <MappingFragment StoreEntitySet="game_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="g_id" ColumnName="g_id" />
+          <ScalarProperty Name="g_name" ColumnName="g_name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="policy">
+      <EntityTypeMapping TypeName="policy_streamModel.policy">
+        <MappingFragment StoreEntitySet="policy">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_type">
+      <EntityTypeMapping TypeName="policy_streamModel.product_type">
+        <MappingFragment StoreEntitySet="product_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="role">
+      <EntityTypeMapping TypeName="policy_streamModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="vcode" ColumnName="vcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_page">
+      <EntityTypeMapping TypeName="policy_streamModel.t_page">
+        <MappingFragment StoreEntitySet="t_page">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="page_name" ColumnName="page_name" />
+          <ScalarProperty Name="page_url" ColumnName="page_url" />
+          <ScalarProperty Name="isleaf" ColumnName="isleaf" />
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="vcode" ColumnName="vcode" />
+          <ScalarProperty Name="is_shortcut" ColumnName="is_shortcut" />
+          <ScalarProperty Name="is_show" ColumnName="is_show" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_user">
+      <EntityTypeMapping TypeName="policy_streamModel.t_user">
+        <MappingFragment StoreEntitySet="t_user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="vcode" ColumnName="vcode" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_user_role">
+      <EntityTypeMapping TypeName="policy_streamModel.v_user_role">
+        <MappingFragment StoreEntitySet="v_user_role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="vcode" ColumnName="vcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_bipdata">
+      <EntityTypeMapping TypeName="policy_streamModel.v_bipdata">
+        <MappingFragment StoreEntitySet="v_bipdata">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+          <ScalarProperty Name="PolicyName" ColumnName="PolicyName" />
+          <ScalarProperty Name="Policyid" ColumnName="Policyid" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="Statusid" ColumnName="Statusid" />
+          <ScalarProperty Name="Game_Name" ColumnName="Game_Name" />
+          <ScalarProperty Name="GameTypeid" ColumnName="GameTypeid" />
+          <ScalarProperty Name="OBDate" ColumnName="OBDate" />
+          <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+          <ScalarProperty Name="ProductTypeid" ColumnName="ProductTypeid" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="Departmentid" ColumnName="Departmentid" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Productid" ColumnName="Productid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="declareflow">
+      <EntityTypeMapping TypeName="policy_streamModel.declareflow">
+        <MappingFragment StoreEntitySet="declareflow">
+          <ScalarProperty Name="memo5" ColumnName="memo5" />
+          <ScalarProperty Name="memo4" ColumnName="memo4" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+          <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+          <ScalarProperty Name="oper_memo" ColumnName="oper_memo" />
+          <ScalarProperty Name="oper_type" ColumnName="oper_type" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="declareorder">
+      <EntityTypeMapping TypeName="policy_streamModel.declareorder">
+        <MappingFragment StoreEntitySet="declareorder">
+          <ScalarProperty Name="memo5" ColumnName="memo5" />
+          <ScalarProperty Name="memo4" ColumnName="memo4" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="last_oper_date" ColumnName="last_oper_date" />
+          <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+          <ScalarProperty Name="next_oper" ColumnName="next_oper" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="attach_url" ColumnName="attach_url" />
+          <ScalarProperty Name="staute" ColumnName="staute" />
+          <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+          <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+          <ScalarProperty Name="product_Id" ColumnName="product_Id" />
+          <ScalarProperty Name="policyId" ColumnName="policyId" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_approve_userlist">
+      <EntityTypeMapping TypeName="policy_streamModel.v_approve_userlist">
+        <MappingFragment StoreEntitySet="v_approve_userlist">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="aid" ColumnName="aid" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_declare_order">
+      <EntityTypeMapping TypeName="policy_streamModel.v_declare_order">
+        <MappingFragment StoreEntitySet="v_declare_order">
+          <ScalarProperty Name="last_memo" ColumnName="last_memo" />
+          <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+          <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+          <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+          <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="product_Id" ColumnName="product_Id" />
+          <ScalarProperty Name="policyName" ColumnName="policyName" />
+          <ScalarProperty Name="policyId" ColumnName="policyId" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="complainorder">
+      <EntityTypeMapping TypeName="policy_streamModel.complainorder">
+        <MappingFragment StoreEntitySet="complainorder">
+          <ScalarProperty Name="memo5" ColumnName="memo5" />
+          <ScalarProperty Name="memo4" ColumnName="memo4" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="staute" ColumnName="staute" />
+          <ScalarProperty Name="last_memo" ColumnName="last_memo" />
+          <ScalarProperty Name="last_oper_date" ColumnName="last_oper_date" />
+          <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+          <ScalarProperty Name="endate" ColumnName="endate" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="attach_url" ColumnName="attach_url" />
+          <ScalarProperty Name="next_oper" ColumnName="next_oper" />
+          <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+          <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+          <ScalarProperty Name="complainName" ColumnName="complainName" />
+          <ScalarProperty Name="complainId" ColumnName="complainId" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="complainflow">
+      <EntityTypeMapping TypeName="policy_streamModel.complainflow">
+        <MappingFragment StoreEntitySet="complainflow">
+          <ScalarProperty Name="memo5" ColumnName="memo5" />
+          <ScalarProperty Name="memo4" ColumnName="memo4" />
+          <ScalarProperty Name="memo3" ColumnName="memo3" />
+          <ScalarProperty Name="memo2" ColumnName="memo2" />
+          <ScalarProperty Name="memo1" ColumnName="memo1" />
+          <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+          <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+          <ScalarProperty Name="oper_type" ColumnName="oper_type" />
+          <ScalarProperty Name="oper_memo" ColumnName="oper_memo" />
+          <ScalarProperty Name="attach_url" ColumnName="attach_url" />
+          <ScalarProperty Name="pm" ColumnName="pm" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="complainId" ColumnName="complainId" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_complain_order">
+      <EntityTypeMapping TypeName="policy_streamModel.v_complain_order">
+        <MappingFragment StoreEntitySet="v_complain_order">
+          <ScalarProperty Name="last_memo" ColumnName="last_memo" />
+          <ScalarProperty Name="last_oper" ColumnName="last_oper" />
+          <ScalarProperty Name="endate" ColumnName="endate" />
+          <ScalarProperty Name="oper_user" ColumnName="oper_user" />
+          <ScalarProperty Name="oper_date" ColumnName="oper_date" />
+          <ScalarProperty Name="complainName" ColumnName="complainName" />
+          <ScalarProperty Name="complainId" ColumnName="complainId" />
+          <ScalarProperty Name="Departmentname" ColumnName="Departmentname" />
+          <ScalarProperty Name="Departmentid" ColumnName="Departmentid" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

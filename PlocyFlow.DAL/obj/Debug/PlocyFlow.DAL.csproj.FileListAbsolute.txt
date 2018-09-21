@@ -1,0 +1,11 @@
+D:\csharp\PlocyFlow\PlocyFlow.DAL\bin\Debug\PlocyFlow.DAL.dll.config
+D:\csharp\PlocyFlow\PlocyFlow.DAL\bin\Debug\PlocyFlow.DAL.dll
+D:\csharp\PlocyFlow\PlocyFlow.DAL\bin\Debug\PlocyFlow.DAL.pdb
+D:\csharp\PlocyFlow\PlocyFlow.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\csharp\PlocyFlow\PlocyFlow.DAL\obj\Debug\PlocyFlow.DAL.dll
+D:\csharp\PlocyFlow\PlocyFlow.DAL\obj\Debug\PlocyFlow.DAL.pdb
+D:\csharp\PolicyFlow\PlocyFlow.DAL\bin\Debug\PlocyFlow.DAL.dll
+D:\csharp\PolicyFlow\PlocyFlow.DAL\bin\Debug\PlocyFlow.DAL.pdb
+D:\csharp\PolicyFlow\PlocyFlow.DAL\obj\Debug\PlocyFlow.DAL.dll
+D:\csharp\PolicyFlow\PlocyFlow.DAL\obj\Debug\PlocyFlow.DAL.pdb
+D:\csharp\PolicyFlow\PlocyFlow.DAL\bin\Debug\PlocyFlow.DAL.dll.config
